@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Studio — Стоматологія Чернігів</title>
+<meta name="description" content="Dental Studio — преміальна стоматологія в Чернігові. Терапія, ортодонтія, імплантація, дитяча стоматологія. Онлайн-запис 24/7. вул. Незалежності, 21.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #B8935A;
+    --gold-light: #D4AA76;
+    --gold-pale: #F5EDD9;
+    --white: #FFFFFF;
+    --cream: #FAF8F4;
+    --beige: #F2EDE4;
+    --text: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-light: #7A7A7A;
+    --border: #E0D8CC;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .nav-logo span { color: var(--gold); font-style: italic; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-phone {
+    font-size: 13px;
+    color: var(--text-mid);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-phone:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 32px 80px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 8vw, 76px);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    color: var(--text);
+    max-width: 720px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-tagline {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: var(--text-mid);
+    margin-bottom: 44px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .stars { color: var(--gold); letter-spacing: 2px; font-size: 14px; }
+
+  .hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    padding: 16px 36px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 16px 36px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* STATS */
+  .stats-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stats-grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    divide: var(--border);
+  }
+
+  .stat-item {
+    padding: 48px 24px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 400;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+
+  /* SECTION WRAPPER */
+  .section-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 32px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 56px;
+    line-height: 1.2;
+    color: var(--text);
+  }
+
+  .section-line {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 16px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 36px 28px;
+    transition: background 0.2s;
+  }
+
+  .service-card:hover { background: var(--cream); }
+
+  .service-icon {
+    font-size: 22px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .service-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .service-price {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* WHY */
+  .why-section { background: var(--beige); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .why-item {
+    background: var(--cream);
+    padding: 40px 36px;
+  }
+
+  .why-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--gold);
+    opacity: 0.35;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .why-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text);
+    letter-spacing: 0.02em;
+  }
+
+  .why-text {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* TEAM */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .team-card { text-align: center; }
+
+  .team-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--beige);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .team-avatar-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .team-avatar-icon svg {
+    width: 36px;
+    height: 36px;
+    fill: var(--gold);
+    opacity: 0.5;
+  }
+
+  .team-photo-hint {
+    font-size: 10px;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .team-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  .team-role {
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* REVIEWS */
+  .reviews-section { background: var(--cream); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .review-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 32px 28px;
+  }
+
+  .review-stars {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+
+  .review-text {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+  }
+
+  .review-author {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .review-author strong {
+    color: var(--text);
+    display: block;
+    font-size: 13px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 2px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: var(--gold-pale);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 96px 32px;
+  }
+
+  .cta-inner { max-width: 560px; margin: 0 auto; }
+
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.15;
+    color: var(--text);
+  }
+
+  .cta-sub {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+
+  /* CONTACTS */
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-item { margin-bottom: 28px; }
+
+  .contact-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .contact-value {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .contact-value a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .contact-value a:hover { color: var(--gold); }
+
+  .map-embed {
+    width: 100%;
+    height: 280px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: var(--beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 13px;
+  }
+
+  .map-embed iframe { width: 100%; height: 100%; border: none; }
+
+  /* FOOTER */
+  footer {
+    background: var(--beige);
+    border-top: 1px solid var(--border);
+    padding: 40px 32px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo span { color: var(--gold); font-style: italic; }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: var(--text-light);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: var(--text-light);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+  }
+
+  /* FORM */
+  .booking-form { text-align: left; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-group { display: flex; flex-direction: column; }
+
+  .form-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .form-input {
+    border: 1px solid var(--border);
+    background: var(--white);
+    padding: 14px 16px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-input:focus { border-color: var(--gold); }
+
+  .form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8935A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
+  .btn-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 16px 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-phone:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    nav { padding: 14px 20px; }
+    .nav-cta { display: none; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-bottom: none; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .contacts-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .btn-primary, .btn-secondary { width: 100%; max-width: 320px; text-align: center; }
+    .section-wrap { padding: 60px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">DENTAL <span>Studio</span></div>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+380736007800">(073) 600-7-800</a>
+    <a class="nav-cta" href="#" onclick="showStub(event)">Записатися</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow reveal">Стоматологія · Чернігів · вул. Незалежності, 21</p>
+  <h1 class="hero-title reveal">Ваші посмішки<br>у <em>надійних руках</em></h1>
+  <p class="hero-tagline reveal">Естетика · Точність · Комфорт · Довіра</p>
+  <div class="hero-rating reveal">
+    <span class="stars">★★★★★</span>
+    <span>4.8 · 478 відгуків Google</span>
+  </div>
+  <div class="hero-buttons reveal">
+    <a class="btn-primary" href="#" onclick="showStub(event)">Записатися онлайн</a>
+    <a class="btn-secondary" href="tel:+380736007800">📞 (073) 600-7-800</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number">4.8</div>
+      <div class="stat-label">Рейтинг<br>Google</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number">478</div>
+      <div class="stat-label">Відгуків<br>пацієнтів</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number">12+</div>
+      <div class="stat-label">Спеціалістів<br>у команді</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number">~28</div>
+      <div class="stat-label">Зубів лікуємо<br>щодня</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div style="background: var(--white); border-bottom: 1px solid var(--border);">
+  <div class="section-wrap">
+    <p class="section-label">Що ми лікуємо</p>
+    <div class="section-line"></div>
+    <h2 class="section-title reveal">Послуги та ціни</h2>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <span class="service-icon">🦷</span>
+        <div class="service-name">Терапія</div>
+        <div class="service-desc">Лікування карієсу, художня реставрація, ендодонтія з мікроскопом CALIPSO, композитний вінір.</div>
+        <div class="service-price">від 1 800 ₴</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">👶</span>
+        <div class="service-name">Дитяча стоматологія</div>
+        <div class="service-desc">Профгігієна, лікування карієсу молочних зубів, зняття нальоту — без стресу для дитини.</div>
+        <div class="service-price">від 500 ₴</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">😁</span>
+        <div class="service-name">Ортодонтія</div>
+        <div class="service-desc">Брекет-системи металеві та керамічні, самолігуючі системи, ортодонтичні пластинки.</div>
+        <div class="service-price">від 4 200 ₴</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">👑</span>
+        <div class="service-name">Ортопедія</div>
+        <div class="service-desc">Керамічні вінири, коронки на основі оксиду-цирконію, металокерамічні коронки.</div>
+        <div class="service-price">від 4 000 ₴</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">⚕️</span>
+        <div class="service-name">Хірургія та імплантація</div>
+        <div class="service-desc">Видалення зубів, імплант OSSTEM, атипове видалення зуба мудрості.</div>
+        <div class="service-price">від 1 200 ₴</div>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">✨</span>
+        <div class="service-name">Гігієна та відбілювання</div>
+        <div class="service-desc">Професійна гігієна зубів, відбілювання Magic Smile — ефект одразу після процедури.</div>
+        <div class="service-price">від 1 400 ₴</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="why-section">
+  <div class="section-wrap">
+    <p class="section-label">Чому обирають нас</p>
+    <div class="section-line"></div>
+    <h2 class="section-title reveal">Стоматологія, де комфортно<br>і дітям, і дорослим</h2>
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-title">Мікроскоп CALIPSO</div>
+        <div class="why-text">Ендодонтія під мікроскопом — точність, яку не побачити неозброєним оком. Новий рівень стоматологічного лікування.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-title">Онлайн-запис 24/7</div>
+        <div class="why-text">Записуйтесь у зручний час без дзвінків. Оберіть лікаря, послугу та час прямо зараз.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-title">Команда, що навчається</div>
+        <div class="why-text">Регулярні тренінги та майстер-класи. Ми не просто працюємо разом — ми розвиваємось разом.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-title">Без поспіху та страху</div>
+        <div class="why-text">«Сучасна стоматологія — не про страх, а про комфорт, турботу та впевненість у результаті.»</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<div style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="section-wrap">
+    <p class="section-label">Наша команда</p>
+    <div class="section-line"></div>
+    <h2 class="section-title reveal">Лікарі</h2>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-photo">
+          <div class="team-avatar-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <div class="team-photo-hint">Фото буде додано</div>
+        </div>
+        <div class="team-name">Дендак Марина Василівна</div>
+        <div class="team-role">Терапевт · Ортопед</div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <div class="team-avatar-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <div class="team-photo-hint">Фото буде додано</div>
+        </div>
+        <div class="team-name">Бусло Олена Василівна</div>
+        <div class="team-role">Дитячий стоматолог</div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <div class="team-avatar-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <div class="team-photo-hint">Фото буде додано</div>
+        </div>
+        <div class="team-name">Фоміченко</div>
+        <div class="team-role">Лікар-ортодонт</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews-section">
+  <div class="section-wrap">
+    <p class="section-label">Що кажуть пацієнти</p>
+    <div class="section-line"></div>
+    <h2 class="section-title reveal">Відгуки · Google Maps</h2>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Дуже задоволена цією стоматологією! Особливо хочу відзначити ортодонта Фоміченка — всі прийоми проходили професійно, комфортно та з увагою до пацієнта.»</div>
+        <div class="review-author">
+          <strong>Sweet Girl</strong>
+          3 тижні тому · Google
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Щиро дякую за чудовий сервіс та комфортне лікування! Лікар Марина Дендак приємна та уважна, детально пояснювала всі свої дії. Рекомендую!»</div>
+        <div class="review-author">
+          <strong>Ольга Жердецька</strong>
+          3 місяці тому · Google
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Дуже приємні враження від клініки! Сучасне обладнання, доброзичливий та професійний персонал, оперативне вирішення проблем та чудовий сервіс.»</div>
+        <div class="review-author">
+          <strong>Natalka Makarets</strong>
+          3 тижні тому · Google
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA + FORM -->
+<div class="cta-section" id="booking">
+  <div class="cta-inner" style="max-width:760px;">
+    <div class="section-line"></div>
+    <h2 class="cta-title reveal">Запишіться на прийом</h2>
+    <p class="cta-sub reveal">Залиште заявку — адміністратор передзвонить і підтвердить час.</p>
+    <form class="booking-form reveal" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Ваше імʼя</label>
+          <input class="form-input" type="text" placeholder="Наприклад: Олена" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Номер телефону</label>
+          <input class="form-input" type="tel" placeholder="+38 (0__) ___ __ __" required>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:24px;">
+        <label class="form-label">Послуга</label>
+        <select class="form-input form-select">
+          <option value="">Оберіть послугу</option>
+          <option>Терапія / Лікування карієсу</option>
+          <option>Дитяча стоматологія</option>
+          <option>Ортодонтія / Брекети</option>
+          <option>Ортопедія / Вінири / Коронки</option>
+          <option>Хірургія / Імплантація</option>
+          <option>Гігієна / Відбілювання</option>
+          <option>Консультація</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <button type="submit" class="btn-primary">Надіслати заявку</button>
+        <a class="btn-phone" href="tel:+380736007800">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (073) 600-7-800
+        </a>
+    </form>
+    <div id="formSuccess" style="display:none;text-align:center;padding:32px;">
+      <div style="font-size:36px;margin-bottom:12px;">✓</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;margin-bottom:8px;">Заявку отримано!</div>
+      <div style="font-size:14px;color:var(--text-light);">Адміністратор передзвонить вам найближчим часом.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACTS -->
+<div style="background: var(--white);">
+  <div class="section-wrap">
+    <p class="section-label">Як нас знайти</p>
+    <div class="section-line"></div>
+    <h2 class="section-title reveal">Контакти</h2>
+    <div class="contacts-grid reveal">
+      <div>
+        <div class="contact-item">
+          <div class="contact-label">Адреса</div>
+          <div class="contact-value">вул. Незалежності, 21<br>Чернігів, 14000</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Телефони</div>
+          <div class="contact-value">
+            <a href="tel:+380736007800">(073) 600-7-800</a><br>
+            <a href="tel:+380776007800">(077) 600-7-800</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Графік роботи</div>
+          <div class="contact-value">Пн–Нд · до 19:00</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Instagram</div>
+          <div class="contact-value">
+            <a href="https://instagram.com/dental_studio_che" target="_blank">@dental_studio_che</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.5!2d31.2949!3d51.4982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d5491f1b5de88f%3A0x1!2z0LLRg9C70LjRhtGPINCd0LXQt9Cw0LvQtdC20L3QvtGB0YLRliAyMSwg0KfQtdGA0L3RltCz0ZbQsg!5e0!3m2!1suk!2sua!4v1"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">DENTAL <span>Studio</span></div>
+  <div class="footer-links">
+    <a href="tel:+380736007800">(073) 600-7-800</a>
+    <a href="tel:+380776007800">(077) 600-7-800</a>
+    <a href="https://instagram.com/dental_studio_che" target="_blank">Instagram</a>
+    <a href="#" onclick="showStub(event)">Записатися</a>
+  </div>
+  <div class="footer-copy">© 2025 Dental Studio · Стоматологія Чернігів · вул. Незалежності, 21</div>
+</footer>
+
+<!-- STUB POPUP -->
+<div id="stubOverlay" style="display:none; position:fixed; inset:0; z-index:999; background:rgba(0,0,0,0.55); align-items:center; justify-content:center; padding:20px;">
+  <div style="background:#FAF8F4; max-width:380px; width:100%; padding:40px 32px; border-radius:2px; text-align:center; position:relative;">
+    <button onclick="document.getElementById('stubOverlay').style.display='none';" style="position:absolute; top:14px; right:14px; background:none; border:none; font-size:20px; cursor:pointer; color:#7A7A7A;">✕</button>
+    <div style="font-size:32px; margin-bottom:14px;">📝</div>
+    <div style="font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; margin-bottom:10px; color:#1A1A1A;">Тут буде ваша форма для заповнення даних</div>
+    <div style="font-size:13px; color:#7A7A7A; line-height:1.6;">Після підключення сайту тут зʼявиться форма онлайн-запису, або ми інтегруємо вашу систему запису.</div>
+  </div>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) el.target.classList.add('visible');
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  function showStub(e) {
+    if (e) e.preventDefault();
+    document.getElementById('stubOverlay').style.display = 'flex';
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    showStub();
+  }
+</script>
+
+</body>
+</html>
